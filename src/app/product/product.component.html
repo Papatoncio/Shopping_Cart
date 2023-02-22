@@ -4,11 +4,9 @@
     </a>
 </h3>
 
-<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">Contenido</button>
+<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">Detalles</button>
 
-<p-dialog [(visible)]="display">
-    Contenido
-    <br>
+<p-dialog header="{{product.name}}" [(visible)]="display">
     <p *ngIf="product.description">
         description: {{ product.description }}
     </p>
