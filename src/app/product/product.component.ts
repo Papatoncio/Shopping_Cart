@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DialogModule } from 'primeng/dialog';
 import { Product } from '../products';
 
 @Component({
@@ -9,6 +10,8 @@ import { Product } from '../products';
 export class ProductComponent {
   @Input() product!: Product;
   display: boolean = false;
+
+  constructor(private dialogModule: DialogModule) { }
 
   share() {
     window.alert('The product has been shared!');
