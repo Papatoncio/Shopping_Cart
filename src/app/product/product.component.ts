@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DialogModule } from 'primeng/dialog';
-import { Product } from '../products';
+import { CartService } from '../cart.service';
+import { Product, products } from '../products';
 
 @Component({
   selector: 'app-product',
@@ -11,7 +13,7 @@ export class ProductComponent {
   @Input() product!: Product;
   display: boolean = false;
 
-  constructor(private dialogModule: DialogModule) { }
+  constructor(private dialogModule: DialogModule, private cartService: CartService, private route: ActivatedRoute) { }
 
   share() {
     window.alert('The product has been shared!');
@@ -23,5 +25,10 @@ export class ProductComponent {
 
   showDialog() {
     this.display = true;
+  }
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
   }
 }

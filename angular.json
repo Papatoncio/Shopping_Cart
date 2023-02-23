@@ -24,10 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/node_modules/primeicons/primeicons.css",
-              "src/node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "src/node_modules/primeng/resources/primeng.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },

@@ -26,7 +26,7 @@ export const products = [
     name: 'Phone Standard',
     price: 299,
     description: '',
-    images: ["41pm+jo7atL._AC_SL1000_.jpg"]
+    images: ["Vivo-Y30-Standard-Edition.webp"]
   },
   {
     id: 4,

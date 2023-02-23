@@ -4,7 +4,12 @@
     </a>
 </h3>
 
-<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show">Detalles</button>
+<p *ngIf="product.description">
+    description: {{ product.description }}
+</p>
+
+<button type="button" (click)="showDialog()" icon="pi pi-info-circle" label="Show" style="border-radius: 10px;"><i
+        class="fas fa-plus"></i></button>
 
 <p-dialog header="{{product.name}}" [(visible)]="display">
     <p *ngIf="product.description">
@@ -15,14 +20,22 @@
         Price: ${{ product.price }}
     </p>
     <br>
-    <img src="./assets/phones/{{product.images}}" width="100px" height="100px" alt="Sin imagen">
+    <img src="./assets/phones/{{product.images}}" width="100px" height="auto" alt="Sin imagen">
+    <button type="button" (click)="addToCart(product)" style="border-radius: 10px;">
+        <i class="fas fa-cart-plus"></i>
+    </button>
 </p-dialog>
 
 <br>
+<br>
 
-<button type="button" (click)="share()">
-    Share
+<button type="button" (click)="share()" style="border-radius: 10px;">
+    <i class="fas fa-share"></i>
 </button>
 
-<app-product-alerts [product]="product" (notify)="onNotify()">
-</app-product-alerts>
+<br>
+<br>
+
+<button type="button" (click)="onNotify()" style="border-radius: 10px;">
+    <i class="fas fa-envelope-open-text"></i>
+</button>
