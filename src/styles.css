@@ -156,6 +156,31 @@ app-top-bar h1 {
   background-color: #EEEEEE;
 }
 
+p-dialog ::ng-deep .p-dialog-header {
+  background-color: #222222;
+}
+
+p-dialog ::ng-deep .p-dialog-header .p-dialog-title {
+  color: white;
+}
+
+p-dialog ::ng-deep .p-dialog-content {
+  background-color: #222222;
+}
+
+p-dialog ::ng-deep .p-dialog-content p {
+  color: white;
+  font-size: large;
+}
+
+p-dialog ::ng-deep .p-dialog-content img {
+  border-color: #222222;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 30px;
+}
+
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
